@@ -9,5 +9,5 @@ yarn install
 ## Run
 
 ```shell
-yarn run prestart && yarn run start
+yarn run start
 ```

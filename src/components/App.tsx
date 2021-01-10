@@ -1,13 +1,18 @@
 import * as React from 'react'
-import {Button} from 'antd'
+import {Button, message} from 'antd'
 import './App.less'
+import {RecoilRoot} from "recoil";
+import HelloWorld from "./HelloWorld";
 
 const App: React.FC = () => {
   return (
-    <div className='app'>
-      electron!
-      <Button type='primary'>Antd</Button>
-    </div>
+    <RecoilRoot>
+      <div className='app flex-column'>
+        electron!
+        <Button type='primary' onClick={() => message.success('React / Antd / Electron!')}>Antd</Button>
+        <HelloWorld/>
+      </div>
+    </RecoilRoot>
   )
 }
 
