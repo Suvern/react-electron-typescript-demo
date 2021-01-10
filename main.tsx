@@ -1,15 +1,11 @@
-import { app, BrowserWindow, Menu, MenuItem, dialog } from 'electron'
+import {app, BrowserWindow} from 'electron'
 
 let mainWindow: BrowserWindow = null
 let createWindow = function () {
   mainWindow = new BrowserWindow({
     width: 800,
     height: 600,
-    webPreferences: {
-      // nodeIntegration: true
-    },
-    // fullscreenable:false,
-    // maximizable:false
+    webPreferences: {},
   })
   //   mainWindow.webContents.openDevTools()
   mainWindow.loadFile('index.html')
@@ -17,6 +13,8 @@ let createWindow = function () {
     mainWindow = null
   })
 }
+
+app.allowRendererProcessReuse = true
 app.on('ready', createWindow)
 app.on('window-all-closed', () => {
   if (process.platform !== 'darwin') {
