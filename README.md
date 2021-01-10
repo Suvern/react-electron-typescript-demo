@@ -1,4 +1,4 @@
-# CumtLogin
+# CumtLogin Electron App
 
 ## Install Dependencies
 
