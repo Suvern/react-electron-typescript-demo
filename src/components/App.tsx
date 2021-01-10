@@ -8,7 +8,7 @@ const App: React.FC = () => {
   return (
     <RecoilRoot>
       <div className='app flex-column'>
-        electron!
+        electron !
         <Button type='primary' onClick={() => message.success('React / Antd / Electron!')}>Antd</Button>
         <HelloWorld/>
       </div>

@@ -6,8 +6,7 @@
   "license": "MIT",
   "scripts": {
     "prestart": "webpack --config webpack.common.config.js",
-    "start": "electron .",
-    "dev": "yarn run prestart && yarn run start"
+    "start": "electron ."
   },
   "devDependencies": {
     "css-loader": "^5.0.1",
